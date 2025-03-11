@@ -1165,3 +1165,89 @@ span {
         font-size: 1.4rem;
     }
 }
+
+/* Esto para porfin arreglar el problema en monitores grandes */
+
+@media (min-width: 1440px) {
+ 
+    section {
+        padding: 3rem 15%;
+    }
+
+    
+    .lenguaje-container {
+        margin-top: -8rem;
+        margin-bottom: -8rem;
+    }
+
+    .cartaleng {
+        min-width: 100px;
+        height: 120%;
+    }
+
+     
+    .expe-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-items: center;
+    }
+
+    .expe-bubble {
+        max-width: 300px;
+        padding: 2rem;
+    }
+
+    .expe-bubble h1 {
+        font-size: 1.5rem;
+    }
+
+    .expe-bubble p {
+        font-size: 1.3rem;
+    }
+
+ 
+    .expeLibros-container {
+        gap: 2rem;
+    }
+
+    .expeLibro {
+        width: 350px;
+        height: 450px;
+    }
+
+    .libCover h2 {
+        font-size: 2rem;
+    }
+
+    .libCont {
+        font-size: 1.5rem;
+    }
+
+ 
+    .proyect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .proyecarta {
+        width: 75%;
+        max-width: 900px;
+        aspect-ratio: 16/8;
+        border-radius: 16px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .proyecontent h2 {
+        font-size: 3rem;
+    }
+
+    .proyecontent h3 {
+        font-size: 1.8rem;
+    }
+
+    .proyecontent p {
+        font-size: 2rem;
+    }
+}
