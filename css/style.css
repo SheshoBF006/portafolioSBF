@@ -1169,85 +1169,102 @@ span {
 /* Esto para porfin arreglar el problema en monitores grandes */
 
 @media (min-width: 1440px) {
- 
+   
     section {
         padding: 3rem 15%;
     }
 
-    
+    .educa-container {
+        margin-bottom: -3rem; 
+    }
+
     .lenguaje-container {
-        margin-top: -8rem;
-        margin-bottom: -8rem;
+        margin-top: 0rem; 
+        margin-bottom: -5rem; 
+    }
+
+    .lenguaje {
+        max-width: 1000px;
+        height: 400px;
+        gap: 15px;
     }
 
     .cartaleng {
-        min-width: 100px;
-        height: 120%;
+        min-width: 120px;
+        height: 140%;
     }
 
-     
+    .cartaleng-content {
+        font-size: 1.6rem;
+    }
+
     .expe-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
+        gap: 1.5rem;
         justify-items: center;
     }
 
     .expe-bubble {
-        max-width: 300px;
-        padding: 2rem;
+        max-width: 320px;
+        padding: 2.5rem;
     }
 
     .expe-bubble h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .expe-bubble p {
-        font-size: 1.3rem;
-    }
-
- 
-    .expeLibros-container {
-        gap: 2rem;
-    }
-
-    .expeLibro {
-        width: 350px;
-        height: 450px;
-    }
-
-    .libCover h2 {
-        font-size: 2rem;
-    }
-
-    .libCont {
         font-size: 1.5rem;
     }
 
- 
+    .expeLibros-container {
+        gap: 3rem;
+        margin-top: 5rem;
+    }
+
+    .expeLibro {
+        width: 370px;
+        height: 480px;
+    }
+
+    .libCover h2 {
+        font-size: 2.2rem;
+    }
+
+    .libCont {
+        font-size: 1.6rem;
+    }
+
+    .expe-container {
+        margin-bottom: 8rem; 
+    }
+
+
     .proyect {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 4rem;
+        gap: 5rem; 
     }
 
     .proyecarta {
         width: 75%;
-        max-width: 900px;
-        aspect-ratio: 16/8;
+        max-width: 950px;
+        aspect-ratio: 16/7;
         border-radius: 16px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
     }
 
     .proyecontent h2 {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
 
     .proyecontent h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .proyecontent p {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
+
