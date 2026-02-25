@@ -14,6 +14,13 @@ body {
   scroll-behavior: smooth;
 }
 
+h2 {
+  /*color: red;*/
+  background: #202020;
+  padding: 0rem 0.5rem 0rem 0rem;
+  width: fit-content;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -76,7 +83,7 @@ a {
   cursor: pointer;
 }
 
-/* Carta de Hero Principal */
+/* Carta del hero main */
 .hero {
   display: flex;
   flex-direction: column;
@@ -235,9 +242,11 @@ section {
   margin: auto;
 }
 
-/*.sobre-mi {
+.sobre-mi {
+    margin-top: 8rem;
     background: #202020;
-}*/
+    padding: 2rem 2rem;
+}
 
 .proyectos-grid {
   display: grid;
@@ -279,6 +288,7 @@ section {
 .contacto input,
 .contacto textarea {
   padding: 0.8rem;
+  font-family: sans-serif;
   border: 1px solid #D6D6D6;
   border-radius: 5px;
 }
@@ -346,7 +356,7 @@ footer {
 /* Grid de la info*/
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -410,6 +420,7 @@ footer {
 .skills {
   /*background: #202020;*/
   margin-top: 2rem;
+  
 }
 
 .skills-grid {
@@ -418,6 +429,8 @@ footer {
   gap: 2rem;
   margin-top: 2rem;
   text-align: center;
+  background: #202020;
+  padding: 1rem 1rem;
 }
 
 .skill i {
@@ -450,3 +463,63 @@ section.visible {
     font-size: 1rem;
 }
 
+
+/* ===== CAPA ESTRELLAS ===== */
+#stars {
+  position: fixed;
+  inset: 0;                    /* top:0 right:0 bottom:0 left:0 */
+  overflow: hidden;
+  z-index: 0;                  /* detrás del contenido */
+  pointer-events: none;        /* no bloquea clicks */
+}
+
+.star {
+  display: block;
+  background-color: #00A8E8;
+  position: absolute;
+  border-radius: 100%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* orbita */
+@keyframes move_right {
+  from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
+}
+
+@keyframes move_left {
+  from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+  to   { transform: rotate(-360deg) translateX(8px) rotate(360deg); }
+}
+
+/* Contenido Clean */
+.container {
+  position: relative;
+  z-index: 1; /* para que este sobre las estrellas */
+  padding: 80px 20px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-out;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  opacity: 0.85;
+  transition: transform 0.2s ease-out;
+}
+
+.box {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+html {
+  scrollbar-width: none;
+}
