@@ -122,3 +122,53 @@ function typeEffect() {
 
 typeEffect();
 
+const starsLayer = document.getElementById("stars");
+
+// Personalización (equivalente a tu tutorial)
+const number_of_star = 150;     // cantidad
+const min_radius = 1;           // radio mínimo
+const max_radius = 4;           // radio máximo
+const min_duration = 6;         // velocidad mínima (segundos)
+const max_duration = 16;        // velocidad máxima
+
+function random_number(min, max) {
+  // entero entre min y max
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function createStars() {
+  // Limpia si reinicias en resize
+  starsLayer.innerHTML = "";
+
+  const h = window.innerHeight;
+  const w = window.innerWidth;
+
+  for (let i = 0; i < number_of_star; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+
+    const top = random_number(0, h);
+    const left = random_number(0, w);
+    const radius = random_number(min_radius, max_radius);
+    const duration = random_number(min_duration, max_duration);
+
+    // alterna animación izquierda/derecha
+    const animName = (i % 2 === 0) ? "move_right" : "move_left";
+
+    star.style.top = `${top}px`;
+    star.style.left = `${left}px`;
+    star.style.width = `${radius}px`;
+    star.style.height = `${radius}px`;
+    star.style.animationName = animName;
+    star.style.animationDuration = `${duration}s`;
+
+    starsLayer.appendChild(star);
+  }
+}
+
+createStars();
+
+// Opcional: si cambias tamaño de ventana, recalcula área
+window.addEventListener("resize", () => {
+  createStars();
+});
